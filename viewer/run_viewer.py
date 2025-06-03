@@ -4,6 +4,9 @@ import json
 from aiortc.contrib.media import MediaRecorder
 from shared.rtc_utils import create_peer_connection
 from aiortc import RTCSessionDescription
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 async def run_viewer():
     session_id = input("Enter session ID: ")

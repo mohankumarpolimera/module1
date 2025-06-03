@@ -4,6 +4,10 @@ import json
 from aiortc import MediaStreamTrack, RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaPlayer
 from shared.rtc_utils import create_peer_connection, handle_sdp_offer
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 async def run_client():
     session_id = input("Enter session ID: ")
